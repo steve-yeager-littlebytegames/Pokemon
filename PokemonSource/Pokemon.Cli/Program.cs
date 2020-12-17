@@ -7,11 +7,12 @@ namespace Pokemon.Cli
     {
         public static void Main(string[] args)
         {
-            var coreSim = new CoreSim();
+            var coreSim = new CoreSim("D:\\Projects\\Git\\Pokemon\\PokemonSource\\GameData");
 
             while(true)
             {
-                coreSim.Load("D:\\Projects\\Git\\Pokemon\\PokemonSource\\GameData\\Pokemon");
+                coreSim.Load();
+                coreSim.Save();
                 Console.Write(coreSim.PokemonDatabase.ToString());
                 Console.ReadKey();
             }
