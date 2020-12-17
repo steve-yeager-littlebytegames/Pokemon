@@ -12,7 +12,7 @@ namespace Pokemon.Core.Sim
 
         public override string ToString()
         {
-            return JsonSerializer.Serialize(this);
+            return JsonSerializer.Serialize(this, new JsonSerializerOptions{WriteIndented = true});
         }
 
         public static GameState CreateDefault()
