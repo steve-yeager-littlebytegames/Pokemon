@@ -1,12 +1,20 @@
 ﻿using System;
+using Pokemon.Core.Sim;
 
 namespace Pokemon.Cli
 {
-    class Program
+    public static class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var coreSim = new CoreSim();
+
+            while(true)
+            {
+                coreSim.Load("D:\\Projects\\Git\\Pokemon\\PokemonSource\\GameData\\Pokemon");
+                Console.Write(coreSim.PokemonDatabase.ToString());
+                Console.ReadKey();
+            }
         }
     }
 }
