@@ -4,6 +4,8 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
     <Nullable>enable</Nullable>
+    <TargetName>Pokemon</TargetName>
+    <ApplicationIcon>Resources\pokemon_icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,5 +15,10 @@
   <ItemGroup>
     <ProjectReference Include="..\Pokemon.Core\Pokemon.Core.csproj" />
   </ItemGroup>
+
+  <Target Name="Rename" AfterTargets="AfterBuild">
+    <Move SourceFiles="$(OUTDIR)\Pokemon.Cli.exe" DestinationFiles="$(OUTDIR)\Pokemon.exe" />
+    <Message Text="Renamed executable file." Importance="high" />
+  </Target>
 
 </Project>
