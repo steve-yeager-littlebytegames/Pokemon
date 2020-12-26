@@ -1,0 +1,97 @@
+@startuml Battle Sequence
+participant Trainer1
+participant Trainer2
+participant BattleManager
+participant BattleMessageHandler
+participant IBattleMessageProcessor
+participant PriorityResolver
+
+' Trainer 1 fail
+Trainer1 -> BattleManager: RecieveMessage
+activate BattleManager
+
+BattleManager -> BattleMessageHandler: RecieveMessage
+activate BattleMessageHandler
+
+BattleMessageHandler --> BattleManager: <<IBattleMessageProcessor>>
+deactivate BattleMessageHandler
+
+BattleManager -> IBattleMessageProcessor: ProcessMessage
+activate IBattleMessageProcessor
+
+IBattleMessageProcessor --> BattleManager: <<false>>
+deactivate IBattleMessageProcessor
+
+BattleManager --> Trainer1: <<BattleState Fail>>
+deactivate BattleManager
+
+' Trainer 1 success
+Trainer1 -> BattleManager: RecieveMessage
+activate BattleManager
+
+BattleManager -> BattleMessageHandler: RecieveMessage
+activate BattleMessageHandler
+
+BattleMessageHandler --> BattleManager: <<IBattleMessageProcessor>>
+deactivate BattleMessageHandler
+
+BattleManager -> IBattleMessageProcessor: ProcessMessage
+activate IBattleMessageProcessor
+
+IBattleMessageProcessor --> BattleManager: <<true>>
+deactivate IBattleMessageProcessor
+
+BattleManager --> Trainer1: <<BattleState Success>>
+deactivate BattleManager
+
+' Trainer 2 success
+Trainer2 -> BattleManager: RecieveMessage
+activate BattleManager
+
+BattleManager -> BattleMessageHandler: RecieveMessage
+activate BattleMessageHandler
+
+BattleMessageHandler --> BattleManager: <<IBattleMessageProcessor>>
+deactivate BattleMessageHandler
+
+BattleManager -> IBattleMessageProcessor: ProcessMessage
+activate IBattleMessageProcessor
+
+IBattleMessageProcessor --> BattleManager: <<true>>
+deactivate IBattleMessageProcessor
+
+' Execute
+BattleManager -> PriorityResolver: Resolve
+activate PriorityResolver
+
+PriorityResolver --> BattleManager: <<IBattleMessageProcessor[]>>
+deactivate PriorityResolver
+
+BattleManager -> IBattleMessageProcessor: Process
+activate IBattleMessageProcessor
+
+IBattleMessageProcessor --> BattleManager: <<Result>>
+deactivate IBattleMessageProcessor
+
+BattleManager -> IBattleMessageProcessor: IsValid
+activate IBattleMessageProcessor
+
+IBattleMessageProcessor --> BattleManager: <<true>>
+deactivate IBattleMessageProcessor
+
+BattleManager -> IBattleMessageProcessor: Process
+activate IBattleMessageProcessor
+
+IBattleMessageProcessor --> BattleManager: <<Result>>
+deactivate IBattleMessageProcessor
+
+/'
+- Get priority
+- Execute move A
+- Validate move b
+- Execute move b
+'/
+
+BattleManager --> Trainer2: <<BattleState Success>>
+deactivate BattleManager
+@enduml

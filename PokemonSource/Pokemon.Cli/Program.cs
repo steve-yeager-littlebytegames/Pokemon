@@ -15,17 +15,7 @@ namespace Pokemon.Cli
                 .MapResult(
                     (PokemonDatabaseArg arg) => arg.Run(coreSim),
                     (GameStateArg arg) => arg.Run(coreSim),
-                    errors => 1);
-
-            //var coreSim = new CoreSim("D:\\Projects\\Git\\Pokemon\\PokemonSource\\GameData");
-
-            //while(true)
-            //{
-            //    coreSim.Load();
-            //    coreSim.Save();
-            //    Console.Write(coreSim.PokemonDatabase.ToString());
-            //    Console.ReadKey();
-            //}
+                    _ => 1);
         }
     }
 }

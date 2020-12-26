@@ -6,7 +6,7 @@ namespace Pokemon.Core.Data
     [Serializable]
     public class Pokemon
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public PokemonType Element { get; set; }
         public Stats Stats { get; set; }

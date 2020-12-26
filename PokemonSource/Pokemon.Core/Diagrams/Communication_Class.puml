@@ -1,0 +1,94 @@
+﻿@startuml Communication Layer
+BattleRequestMessage <|.. MoveRequest
+BattleRequestMessage <|.. SwapRequest
+BattleRequestMessage <|.. UseItemRequest
+BattleRequestMessage <.. BattleMessageHandler
+BattleRequestMessage <.. IBattleMessageProcessor
+IBattleMessageProcessor <.. BattleMessageProcessor
+BattleState <.. IBattleMessageProcessor
+BattleState ..|> BattleManager
+BattleMessageHandler ..|> BattleManager
+
+class BattleManager {
+    RecieveMessage(message: BattleRequestMessage): void
+}
+
+hide BattleState methods
+class BattleState {
+    trainer1Id: int
+    trainer2Id: int
+    turnNumber: int
+}
+
+hide BattleRequestMessage methods
+abstract class BattleRequestMessage {
+    trainerId: int
+}
+
+hide MoveRequest methods
+class MoveRequest {
+    pokemonSourceId: int
+    pokemonTargetId: int
+    moveId: int
+}
+
+hide SwapRequest methods
+class SwapRequest {
+    pokemonSourceId: int
+    pokemonTargetId: int
+}
+
+hide UseItemRequest methods
+class UseItemRequest {
+    itemId: int
+    pokemonTargetId: int
+}
+
+hide BattleMessageHandler fields
+class BattleMessageHandler {
+    RecieveMessage(message: BattleRequestMessage): void
+}
+
+hide IBattleMessageProcessor fields
+interface IBattleMessageProcessor {
+    GetMessagePriority(message: BattleMessage, opponentMessage: BattleMessage): decimal
+    IsMessageValid(message: BattleMessage, BattleState: BattleState): bool
+    ProcessMessage(message: BattleMessage, BattleState: BattleState): void
+}
+
+hide BattleMessageProcessor fields
+abstract class BattleMessageProcessor<TMessage extends BattleMessage> {
+    GetMessagePriority(message: TMessage, opponentMessage: BattleMessage): decimal
+    IsMessageValid(message: TMessage, BattleState: BattleState): bool
+    ProcessMessageInternal(message: <TMessage>, BattleState: BattleState): void
+}
+
+@enduml
+
+
+/'
+Responsibilities
+- define request messages
+- define response messages
+- provide api for messages
+- parse messages and send to correct system
+- determine message resolution priority
+- services that execute messages
+- return results of processing
+    - did pokemon die?
+    - how do I cancel the next message if it's not applicable anymore?
+        - do I need a validation step?
+- battle state
+
+Considerations
+- wild pokemon have no trainer
+- AI trainers have no ID
+
+Questions
+- How does the presentation recieve events?
+- swapping vs new pokemon?
+- do I need a battle FSM?
+
+Wishlist
+- Generate json schemas
+'/

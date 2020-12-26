@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.Cli", "Pokemon.Cli\Pokemon.Cli.csproj", "{17A4C0CB-17EC-40E9-A30B-3FB84A829932}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Cli", "Pokemon.Cli\Pokemon.Cli.csproj", "{17A4C0CB-17EC-40E9-A30B-3FB84A829932}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.Core", "Pokemon.Core\Pokemon.Core.csproj", "{59CD3109-8804-4B4D-9942-3E4DAC7694DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Core", "Pokemon.Core\Pokemon.Core.csproj", "{59CD3109-8804-4B4D-9942-3E4DAC7694DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.BattleSim", "Pokemon.BattleSim\Pokemon.BattleSim.csproj", "{A165547B-20FE-46CF-A290-B971991F31B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{59CD3109-8804-4B4D-9942-3E4DAC7694DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59CD3109-8804-4B4D-9942-3E4DAC7694DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59CD3109-8804-4B4D-9942-3E4DAC7694DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A165547B-20FE-46CF-A290-B971991F31B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A165547B-20FE-46CF-A290-B971991F31B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A165547B-20FE-46CF-A290-B971991F31B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A165547B-20FE-46CF-A290-B971991F31B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
