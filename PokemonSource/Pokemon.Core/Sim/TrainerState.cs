@@ -1,34 +1,38 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text.Json;
 using Pokemon.Core.State;
 
 namespace Pokemon.Core.Sim
 {
-    public class GameState
+    public class TrainerState
     {
+        public Guid TrainerId { get; set; }
         public string TrainerName { get; set; }
-        public int[] Party { get; set; }
-        public List<PokemonState> PokemonCollection { get; set; }
+        public Guid[] Party { get; set; }
+        public List<PokemonState> PokemonCollection { get; set; } = new(0);
 
         public override string ToString()
         {
-            return JsonSerializer.Serialize(this, new JsonSerializerOptions{WriteIndented = true});
+            return JsonSerializer.Serialize(this, new JsonSerializerOptions {WriteIndented = true});
         }
 
-        public static GameState CreateDefault()
+        public static TrainerState CreateDefault()
         {
-            return new GameState
+            var starterId = Guid.NewGuid();
+
+            return new TrainerState
             {
                 TrainerName = "Ash",
                 Party = new[]
                 {
-                    0, -1, -1, -1, -1, -1
+                    starterId, Guid.Empty, Guid.Empty, Guid.Empty, Guid.Empty, Guid.Empty,
                 },
                 PokemonCollection = new List<PokemonState>
                 {
                     new PokemonState
                     {
-                        Id = 0,
+                        Id = starterId,
                         PokemonId = 0,
                         Name = "Bulby",
                         Health = 100,

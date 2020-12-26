@@ -6,7 +6,7 @@ namespace Pokemon.Core.State
     public class PokemonState
     {
         public Guid Id { get; set; }
-        public Guid PokemonId { get; set; }
+        public int PokemonId { get; set; }
         public string Name { get; set; } = string.Empty;
         public int Level { get; set; }
         public int Experience { get; set; }

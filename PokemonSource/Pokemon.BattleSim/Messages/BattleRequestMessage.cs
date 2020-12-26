@@ -1,10 +1,12 @@
-﻿namespace Pokemon.BattleSim.Messages
+﻿using System;
+
+namespace Pokemon.BattleSim.Messages
 {
     public abstract class BattleRequestMessage
     {
-        protected int TrainerId { get; }
+        protected Guid TrainerId { get; }
 
-        protected BattleRequestMessage(int trainerId)
+        protected BattleRequestMessage(Guid trainerId)
         {
             TrainerId = trainerId;
         }

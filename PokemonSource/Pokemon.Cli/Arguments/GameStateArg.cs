@@ -9,7 +9,7 @@ namespace Pokemon.Cli.Arguments
     {
         public int Run(CoreSim coreSim)
         {
-            Console.WriteLine(coreSim.GameState.ToString());
+            Console.WriteLine(coreSim.TrainerState.ToString());
             return 0;
         }
     }

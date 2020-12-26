@@ -1,11 +1,13 @@
-﻿namespace Pokemon.BattleSim.Messages
+﻿using System;
+
+namespace Pokemon.BattleSim.Messages
 {
     public class ItemRequest : BattleRequestMessage
     {
-        public string ItemId { get; }
-        public int TargetPokemonId { get; }
+        public int ItemId { get; }
+        public Guid TargetPokemonId { get; }
 
-        public ItemRequest(int trainerId, string itemId, int targetPokemonId)
+        public ItemRequest(Guid trainerId, int itemId, Guid targetPokemonId)
             : base(trainerId)
         {
             ItemId = itemId;

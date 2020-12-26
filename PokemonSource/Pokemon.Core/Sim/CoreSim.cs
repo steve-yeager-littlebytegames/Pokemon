@@ -10,7 +10,7 @@ namespace Pokemon.Core.Sim
         private readonly string dataPath;
 
         public PokemonDatabase PokemonDatabase { get; } = new PokemonDatabase();
-        public GameState GameState { get; private set; } = new GameState();
+        public TrainerState TrainerState { get; private set; } = new TrainerState();
 
         public CoreSim(string dataPath)
         {
@@ -34,11 +34,11 @@ namespace Pokemon.Core.Sim
                 if(File.Exists(path))
                 {
                     string json = File.ReadAllText(path);
-                    GameState = JsonSerializer.Deserialize<GameState>(json)!;
+                    TrainerState = JsonSerializer.Deserialize<TrainerState>(json)!;
                 }
                 else
                 {
-                    GameState = GameState.CreateDefault();
+                    TrainerState = TrainerState.CreateDefault();
                 }
             }
         }
@@ -46,7 +46,7 @@ namespace Pokemon.Core.Sim
         public void Save()
         {
             string filePath = Path.Combine(dataPath, GameStatePath);
-            var gameStateJson = JsonSerializer.Serialize(GameState, new JsonSerializerOptions {WriteIndented = true});
+            var gameStateJson = JsonSerializer.Serialize(TrainerState, new JsonSerializerOptions {WriteIndented = true});
             File.WriteAllText(filePath, gameStateJson);
         }
     }
