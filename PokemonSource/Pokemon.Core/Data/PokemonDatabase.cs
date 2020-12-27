@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Pokemon.Core.Sim
+namespace Pokemon.Core.Data
 {
     public class PokemonDatabase
     {

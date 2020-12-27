@@ -1,6 +1,6 @@
 ﻿using System;
 using CommandLine;
-using Pokemon.Core.Sim;
+using Pokemon.Core;
 
 namespace Pokemon.Cli.Arguments
 {
@@ -9,7 +9,7 @@ namespace Pokemon.Cli.Arguments
     {
         public int Run(CoreSim coreSim)
         {
-            Console.WriteLine(coreSim.PokemonDatabase.ToString());
+            Console.WriteLine(coreSim.GameData.ToString());
             return 0;
         }
     }

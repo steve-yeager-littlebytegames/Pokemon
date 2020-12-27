@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Pokemon.Core.Data;
 
 namespace Pokemon.Core.State
@@ -12,5 +13,7 @@ namespace Pokemon.Core.State
         public int Experience { get; set; }
         public int Health { get; set; }
         public AbilityState[] Abilities { get; set; } = new AbilityState[4];
+
+        public AbilityState GetAbility(Guid abilityId) => Abilities.First(a => a.Id == abilityId);
     }
 }

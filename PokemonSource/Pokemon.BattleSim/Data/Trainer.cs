@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Pokemon.Core.State;
 
 namespace Pokemon.BattleSim.Data
@@ -7,7 +8,9 @@ namespace Pokemon.BattleSim.Data
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public Guid ActivePokemon { get; set; }
+        public Guid ActivePokemonId { get; set; }
         public PokemonState[] Pokemon { get; set; }
+
+        public PokemonState ActivePokemon => Pokemon.First(p => p.Id == ActivePokemonId);
     }
 }

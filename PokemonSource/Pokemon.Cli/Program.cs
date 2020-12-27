@@ -1,6 +1,6 @@
 ﻿using CommandLine;
 using Pokemon.Cli.Arguments;
-using Pokemon.Core.Sim;
+using Pokemon.Core;
 
 namespace Pokemon.Cli
 {
@@ -8,7 +8,7 @@ namespace Pokemon.Cli
     {
         public static int Main(string[] args)
         {
-            var coreSim = new CoreSim("D:\\Projects\\Git\\Pokemon\\PokemonSource\\GameData");
+            var coreSim = CoreSim.Create("D:\\Projects\\Git\\Pokemon\\PokemonSource\\GameData");
             coreSim.Load();
 
             return Parser.Default.ParseArguments<PokemonDatabaseArg, GameStateArg>(args)

@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace Pokemon.Core.Data
+﻿namespace Pokemon.Core.Data
 {
     public class Ability
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
         public int MaxPoints { get; set; }
         public PokemonType PokemonType { get; set; }

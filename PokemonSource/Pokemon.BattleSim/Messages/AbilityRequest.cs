@@ -2,18 +2,18 @@
 
 namespace Pokemon.BattleSim.Messages
 {
-    public class MoveRequest : BattleRequestMessage
+    public class AbilityRequest : BattleRequestMessage
     {
         public Guid SourcePokemonId { get; }
         public Guid TargetPokemonId { get; }
-        public Guid MoveId { get; }
+        public Guid AbilityId { get; }
 
-        public MoveRequest(Guid trainerId, Guid sourcePokemonId, Guid targetPokemonId, Guid moveId)
+        public AbilityRequest(Guid trainerId, Guid sourcePokemonId, Guid targetPokemonId, Guid abilityId)
             : base(trainerId)
         {
             SourcePokemonId = sourcePokemonId;
             TargetPokemonId = targetPokemonId;
-            MoveId = moveId;
+            AbilityId = abilityId;
         }
     }
 }

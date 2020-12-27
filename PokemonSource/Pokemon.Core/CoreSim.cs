@@ -1,32 +1,35 @@
 ﻿using System.IO;
 using System.Text.Json;
+using Pokemon.Core.Data;
+using Pokemon.Core.State;
 
-namespace Pokemon.Core.Sim
+namespace Pokemon.Core
 {
     public class CoreSim
     {
-        private const string PokemonDatabasePath = "Pokemon";
         private const string GameStatePath = "game_state.json";
         private readonly string dataPath;
 
-        public PokemonDatabase PokemonDatabase { get; } = new PokemonDatabase();
-        public TrainerState TrainerState { get; private set; } = new TrainerState();
+        public GameData GameData { get; }
+        public TrainerState TrainerState { get; private set; } = null!;
 
-        public CoreSim(string dataPath)
+        private CoreSim(string dataPath, GameData gameData)
         {
+            GameData = gameData;
             this.dataPath = dataPath;
+        }
+
+        public static CoreSim Create(string dataPath)
+        {
+            var gameData = GameData.Load(Path.Combine(dataPath, "GameData"));
+            var coreSim = new CoreSim(dataPath, gameData);
+            coreSim.Load();
+            return coreSim;
         }
 
         public void Load()
         {
-            LoadPokemonDatabase();
             LoadGameState();
-
-            void LoadPokemonDatabase()
-            {
-                var path = Path.Combine(dataPath, PokemonDatabasePath);
-                PokemonDatabase.Load(path);
-            }
 
             void LoadGameState()
             {

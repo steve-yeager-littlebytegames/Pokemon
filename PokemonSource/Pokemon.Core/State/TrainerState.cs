@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text.Json;
-using Pokemon.Core.State;
 
-namespace Pokemon.Core.Sim
+namespace Pokemon.Core.State
 {
     public class TrainerState
     {

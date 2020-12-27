@@ -4,7 +4,7 @@ namespace Pokemon.BattleSim.Messages
 {
     public abstract class BattleRequestMessage
     {
-        protected Guid TrainerId { get; }
+        public Guid TrainerId { get; }
 
         protected BattleRequestMessage(Guid trainerId)
         {

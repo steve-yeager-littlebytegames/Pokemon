@@ -1,6 +1,6 @@
 ﻿using System;
 using CommandLine;
-using Pokemon.Core.Sim;
+using Pokemon.Core;
 
 namespace Pokemon.Cli.Arguments
 {
