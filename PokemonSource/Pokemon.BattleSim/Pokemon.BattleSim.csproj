@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Pokemon.Core\Pokemon.Core.csproj" />
+    <ProjectReference Include="..\Pokemon.Gamedata\Pokemon.Gamedata.csproj" />
+    <ProjectReference Include="..\Pokemon.State\Pokemon.State.csproj" />
   </ItemGroup>
 
 </Project>

@@ -53,9 +53,17 @@ namespace Pokemon.Core
             File.WriteAllText(filePath, gameStateJson);
         }
 
-        public void FightBattle(TrainerState trainer1, TrainerState trainer2)
+        public void StartBattle(TrainerState trainer1, TrainerState trainer2)
         {
-            //var battleState = new BattleState
+            /*
+             * create battle state
+             * 
+             */
+        }
+
+        public void FightRound()
+        {
+
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Pokemon.Cli.Arguments
             var trainer1 = TrainerFactory.Create("Ash");
             var trainer2 = TrainerFactory.Create("Garry");
 
-            coreSim.FightBattle(trainer1, trainer2);
+            coreSim.StartBattle(trainer1, trainer2);
 
             return 0;
         }
