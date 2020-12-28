@@ -1,6 +1,7 @@
 ﻿using System.IO;
+using Pokemon.Gamedata.Databases;
 
-namespace Pokemon.Core.Data
+namespace Pokemon.Gamedata
 {
     public class GameData
     {

@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Linq;
-using Pokemon.Core.Data;
 
-namespace Pokemon.Core.State
+namespace Pokemon.State.Models
 {
     public class PokemonState
     {

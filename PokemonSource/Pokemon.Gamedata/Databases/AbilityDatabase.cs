@@ -5,8 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using Pokemon.Gamedata.Models;
 
-namespace Pokemon.Core.Data
+namespace Pokemon.Gamedata.Databases
 {
     public class AbilityDatabase
     {

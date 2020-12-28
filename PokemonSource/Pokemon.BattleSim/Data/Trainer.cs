@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using Pokemon.Core.State;
+using Pokemon.State.Models;
 
 namespace Pokemon.BattleSim.Data
 {

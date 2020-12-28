@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Pokemon.Core.Data
+namespace Pokemon.Gamedata.Models
 {
     [Serializable]
     public class Stats

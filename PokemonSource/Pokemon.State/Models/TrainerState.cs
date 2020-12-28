@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text.Json;
 
-namespace Pokemon.Core.State
+namespace Pokemon.State.Models
 {
     public class TrainerState
     {

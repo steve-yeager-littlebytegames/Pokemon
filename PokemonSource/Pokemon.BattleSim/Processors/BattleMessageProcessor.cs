@@ -1,6 +1,6 @@
 ﻿using Pokemon.BattleSim.Data;
 using Pokemon.BattleSim.Messages;
-using Pokemon.Core.Data;
+using Pokemon.Gamedata;
 
 namespace Pokemon.BattleSim.Processors
 {

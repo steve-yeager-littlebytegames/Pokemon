@@ -11,10 +11,11 @@ namespace Pokemon.Cli
             var coreSim = CoreSim.Create("D:\\Projects\\Git\\Pokemon\\PokemonSource\\Data");
             coreSim.Load();
 
-            return Parser.Default.ParseArguments<PokemonDatabaseArg, GameStateArg>(args)
+            return Parser.Default.ParseArguments<PokemonDatabaseArg, GameStateArg, BattleArg>(args)
                 .MapResult(
                     (PokemonDatabaseArg arg) => arg.Run(coreSim),
                     (GameStateArg arg) => arg.Run(coreSim),
+                    (BattleArg arg) => arg.Run(coreSim),
                     _ => 1);
         }
     }

@@ -1,4 +1,4 @@
-﻿namespace Pokemon.Core.Data
+﻿namespace Pokemon.Gamedata.Models
 {
     public enum PokemonType
     {

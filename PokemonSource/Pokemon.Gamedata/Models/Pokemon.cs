@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.Json;
 
-namespace Pokemon.Core.Data
+namespace Pokemon.Gamedata.Models
 {
     [Serializable]
     public class Pokemon

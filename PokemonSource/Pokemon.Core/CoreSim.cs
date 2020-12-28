@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Text.Json;
-using Pokemon.Core.Data;
-using Pokemon.Core.State;
+using Pokemon.Gamedata;
+using Pokemon.State.Models;
 
 namespace Pokemon.Core
 {
@@ -51,6 +51,11 @@ namespace Pokemon.Core
             string filePath = Path.Combine(dataPath, GameStatePath);
             var gameStateJson = JsonSerializer.Serialize(TrainerState, new JsonSerializerOptions {WriteIndented = true});
             File.WriteAllText(filePath, gameStateJson);
+        }
+
+        public void FightBattle(TrainerState trainer1, TrainerState trainer2)
+        {
+            //var battleState = new BattleState
         }
     }
 }

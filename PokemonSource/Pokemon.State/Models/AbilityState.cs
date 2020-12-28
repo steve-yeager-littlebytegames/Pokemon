@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Pokemon.Core.State
+namespace Pokemon.State.Models
 {
     public class AbilityState
     {

@@ -5,21 +5,21 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Pokemon.Core.Data
+namespace Pokemon.Gamedata.Databases
 {
     public class PokemonDatabase
     {
-        public IReadOnlyList<Data.Pokemon> PokemonDefinitions { get; private set; } = Array.Empty<Data.Pokemon>();
+        public IReadOnlyList<Models.Pokemon> PokemonDefinitions { get; private set; } = Array.Empty<Models.Pokemon>();
 
         public void Load(string pokemonDatabasePath)
         {
             var allPokemonData = Directory.GetFiles(pokemonDatabasePath);
-            var pokemonDefinitions = new List<Data.Pokemon>(allPokemonData.Length);
+            var pokemonDefinitions = new List<Models.Pokemon>(allPokemonData.Length);
 
             foreach(var pokemonDataPath in allPokemonData)
             {
                 var pokemonJson = File.ReadAllText(pokemonDataPath);
-                var pokemon = JsonSerializer.Deserialize<Data.Pokemon>(pokemonJson, new JsonSerializerOptions
+                var pokemon = JsonSerializer.Deserialize<Models.Pokemon>(pokemonJson, new JsonSerializerOptions
                 {
                     PropertyNameCaseInsensitive = true,
                     Converters =
