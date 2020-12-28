@@ -1,0 +1,7 @@
+{
+    "$schema": "../Schemas/AbilitySchema.json",
+    "id": 0,
+    "name": "Headbutt",
+    "maxPoints": 10,
+    "damage": 20
+}

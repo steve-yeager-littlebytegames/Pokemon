@@ -8,7 +8,7 @@ namespace Pokemon.Cli
     {
         public static int Main(string[] args)
         {
-            var coreSim = CoreSim.Create("D:\\Projects\\Git\\Pokemon\\PokemonSource\\GameData");
+            var coreSim = CoreSim.Create("D:\\Projects\\Git\\Pokemon\\PokemonSource\\Data");
             coreSim.Load();
 
             return Parser.Default.ParseArguments<PokemonDatabaseArg, GameStateArg>(args)

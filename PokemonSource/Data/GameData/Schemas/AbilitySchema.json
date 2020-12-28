@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Abilities",
+    "type": "object",
+    "required": [
+        "id",
+        "name",
+        "maxPoints",
+        "damage"
+    ],
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        },
+        "maxPoints": {
+            "type": "integer"
+        },
+        "damage": {
+            "type": "integer"
+        }
+    }
+}
