@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Pokemon.Cli": {
+      "commandName": "Executable",
+      "executablePath": "D:\\Projects\\Git\\Pokemon\\PokemonSource\\Pokemon.Cli\\bin\\Debug\\net5.0\\Pokemon.exe"
+    }
+  }
+}
