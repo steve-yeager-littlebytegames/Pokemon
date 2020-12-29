@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Linq;
-using Pokemon.State.Models;
 
-namespace Pokemon.BattleSim.Data
+namespace Pokemon.Battle.State.Models
 {
     public class BattleState
     {
+        public Guid Id { get; set; }
         public int TurnNumber { get; set; }
         public Trainer Trainer1 { get; set; }
         public Trainer Trainer2 { get; set; }

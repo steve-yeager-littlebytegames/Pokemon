@@ -1,13 +1,13 @@
 ﻿using System;
 
-namespace Pokemon.BattleSim.Messages
+namespace Pokemon.Battle.Core.Messages
 {
-    public class ItemRequest : BattleRequestMessage
+    public class ItemTurnRequest : TurnRequest
     {
         public int ItemId { get; }
         public Guid TargetPokemonId { get; }
 
-        public ItemRequest(Guid trainerId, int itemId, Guid targetPokemonId)
+        public ItemTurnRequest(Guid trainerId, int itemId, Guid targetPokemonId)
             : base(trainerId)
         {
             ItemId = itemId;

@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace Pokemon.BattleSim.Messages
+namespace Pokemon.Battle.Core.Messages
 {
-    public class SwapRequest : BattleRequestMessage
+    public class SwapTurnRequest : TurnRequest
     {
         public Guid TargetPokemonId { get; }
 
-        public SwapRequest(Guid trainerId, Guid targetPokemonId)
+        public SwapTurnRequest(Guid trainerId, Guid targetPokemonId)
             : base(trainerId)
         {
             TargetPokemonId = targetPokemonId;
