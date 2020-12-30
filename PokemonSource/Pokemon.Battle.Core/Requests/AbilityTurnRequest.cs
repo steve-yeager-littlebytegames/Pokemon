@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Pokemon.Battle.Core.Messages
+namespace Pokemon.Combat.Core.Requests
 {
     internal class AbilityTurnRequest : TurnRequest
     {

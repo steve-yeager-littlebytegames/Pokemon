@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Pokemon.Battle.Core.Messages
+namespace Pokemon.Combat.Core.Requests
 {
     public class ItemTurnRequest : TurnRequest
     {

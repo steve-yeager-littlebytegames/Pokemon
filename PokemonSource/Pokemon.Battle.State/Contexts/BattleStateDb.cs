@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Pokemon.Battle.State.Models;
+using Pokemon.Combat.State.Models;
 
-namespace Pokemon.Battle.State.Contexts
+namespace Pokemon.Combat.State.Contexts
 {
-    public class StateDb: DbContext
+    public class BattleStateDb: DbContext
     {
         public DbSet<BattleState> BattleStates { get; set; }
         public DbSet<BattleMetadata> BattleMetadata { get; set; }

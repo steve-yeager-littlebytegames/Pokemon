@@ -1,9 +1,9 @@
-﻿using Pokemon.Battle.Core.Messages;
+﻿using Pokemon.Combat.Core.Requests;
 using Pokemon.Gamedata;
 
-namespace Pokemon.Battle.Core.Processors
+namespace Pokemon.Combat.Core.Processors
 {
-    internal class AbilityProcessor : BattleMessageProcessor<AbilityTurnRequest>
+    internal class AbilityProcessor : TurnRequestProcessor<AbilityTurnRequest>
     {
         protected override bool InternalIsMessageValid(AbilityTurnRequest turnRequest, BattleState state, GameData gameData)
         {

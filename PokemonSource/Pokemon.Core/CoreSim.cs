@@ -1,8 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Text.Json;
-using Pokemon.Battle.State.Contexts;
-using Pokemon.Battle.State.Models;
+using Pokemon.Combat.State.Models;
 using Pokemon.Gamedata;
 using Pokemon.State.Models;
 
@@ -12,7 +11,6 @@ namespace Pokemon.Core
     {
         private const string GameStatePath = "game_state.json";
         private readonly string dataPath;
-        private readonly StateDb battleStateDb;
 
         public GameData GameData { get; }
         public TrainerState TrainerState { get; private set; } = null!;
@@ -21,7 +19,6 @@ namespace Pokemon.Core
         {
             GameData = gameData;
             this.dataPath = dataPath;
-            battleStateDb = new StateDb();
         }
 
         public static CoreSim Create(string dataPath)
@@ -60,30 +57,10 @@ namespace Pokemon.Core
 
         public void StartBattle(Guid trainer1Id, Guid trainer2Id)
         {
-            var battleId = Guid.NewGuid();
-
-            var battleState = new BattleState
-            {
-                Id = battleId,
-                Trainer1 = trainer1,
-                Trainer2 = trainer2,
-                TurnNumber = 0,
-            };
-
-            var battleMetadata = new BattleMetadata
-            {
-                Id = battleId,
-            };
-
-            battleStateDb.Add(battleState);
-            battleStateDb.Add(battleMetadata);
-            // TODO: Make async.
-            battleStateDb.SaveChanges();
         }
 
         public void FightRound(BattleState battleState)
         {
-
         }
     }
 }

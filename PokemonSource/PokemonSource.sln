@@ -13,9 +13,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.Gamedata", "Pokemon
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.State", "Pokemon.State\Pokemon.State.csproj", "{A0BAF547-BAE5-4FD5-A378-1FDB60EC0A76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.Battle.Core", "Pokemon.Battle.Core\Pokemon.Battle.Core.csproj", "{713D6B43-A8B5-464A-ACF5-0A6536411D1A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.Combat.Core", "Pokemon.Battle.Core\Pokemon.Combat.Core.csproj", "{713D6B43-A8B5-464A-ACF5-0A6536411D1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.Battle.State", "Pokemon.Battle.State\Pokemon.Battle.State.csproj", "{EBAC2532-0A7E-48A9-9AE1-76FF803523CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.Combat.State", "Pokemon.Battle.State\Pokemon.Combat.State.csproj", "{EBAC2532-0A7E-48A9-9AE1-76FF803523CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

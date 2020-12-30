@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Pokemon.Battle.State.Models
+namespace Pokemon.Combat.State.Models
 {
     public class BattleState
     {
