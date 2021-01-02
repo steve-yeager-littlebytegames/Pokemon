@@ -48,7 +48,7 @@ namespace Pokemon.Core.Services
             // add turn
             battleStateDb.SaveChanges();
             //var turnIsReady = battleMetadata
-            #error fill out steps
+            // TODO: Fill out all steps.
 
             throw new NotImplementedException();
         }

@@ -1,14 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Pokemon.Combat.Core.Models
 {
     public class Monster
     {
+        private int health;
+
         public Guid Id { get; }
         public int DataId { get; }
         public string Name { get; }
-        public int Health { get; }
+        public int Health
+        {
+            get => health;
+            // TODO: Use max health.
+            set => health = Math.Clamp(value, 0, 100);
+        }
 
         public IReadOnlyCollection<Ability> Abilities { get; }
 
@@ -17,8 +25,10 @@ namespace Pokemon.Combat.Core.Models
             Id = id;
             DataId = dataId;
             Name = name;
-            Health = health;
+            this.health = health;
             Abilities = abilities;
         }
+
+        public Ability GetAbility(Guid abilityId) => Abilities.First(a => a.Id == abilityId);
     }
 }

@@ -6,13 +6,13 @@ namespace Pokemon.Debug
 {
     public static class TrainerFactory
     {
-        public static TrainerState Create(string trainerName)
+        public static PlayerState Create(string trainerName)
         {
             var pokemonId = Guid.NewGuid();
 
-            var trainerState = new TrainerState
+            var trainerState = new PlayerState
             {
-                TrainerId = Guid.NewGuid(),
+                Id = Guid.NewGuid(),
                 TrainerName = trainerName,
                 Party = new[] {pokemonId},
                 PokemonCollection = new List<PokemonState>

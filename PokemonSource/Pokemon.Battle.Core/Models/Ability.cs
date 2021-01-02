@@ -6,6 +6,7 @@ namespace Pokemon.Combat.Core.Models
     {
         private int points;
 
+        public Guid Id { get; }
         public int DataId { get; }
         public string Name { get; }
 
@@ -15,8 +16,9 @@ namespace Pokemon.Combat.Core.Models
             set => points = Math.Clamp(value, 0, 100);
         }
 
-        public Ability(int dataId, string name, int points)
+        public Ability(Guid id, int dataId, string name, int points)
         {
+            Id = id;
             DataId = dataId;
             Name = name;
             this.points = points;

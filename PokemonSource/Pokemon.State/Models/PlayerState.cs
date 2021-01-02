@@ -4,9 +4,9 @@ using System.Text.Json;
 
 namespace Pokemon.State.Models
 {
-    public class TrainerState
+    public class PlayerState
     {
-        public Guid TrainerId { get; set; }
+        public Guid Id { get; set; }
         public string TrainerName { get; set; }
         public Guid[] Party { get; set; }
         public List<PokemonState> PokemonCollection { get; set; } = new(0);
@@ -16,11 +16,11 @@ namespace Pokemon.State.Models
             return JsonSerializer.Serialize(this, new JsonSerializerOptions {WriteIndented = true});
         }
 
-        public static TrainerState CreateDefault()
+        public static PlayerState CreateDefault()
         {
             var starterId = Guid.NewGuid();
 
-            return new TrainerState
+            return new PlayerState
             {
                 TrainerName = "Ash",
                 Party = new[]
