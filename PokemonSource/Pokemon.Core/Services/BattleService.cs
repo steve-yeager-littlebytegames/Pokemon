@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Linq;
 using Pokemon.Combat.Core.Requests;
 using Pokemon.Combat.State.Contexts;
 using Pokemon.Combat.State.Models;
-using Pokemon.State.Models;
 
 namespace Pokemon.Core.Services
 {

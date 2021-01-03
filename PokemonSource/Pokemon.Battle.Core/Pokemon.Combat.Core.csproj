@@ -9,4 +9,9 @@
     <ProjectReference Include="..\Pokemon.Gamedata\Pokemon.Gamedata.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Responses\" />
+  </ItemGroup>
+
 </Project>

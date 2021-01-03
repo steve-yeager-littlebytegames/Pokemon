@@ -8,7 +8,7 @@ namespace Pokemon.Combat.Core.Processors
     {
         protected override bool InternalIsMessageValid(AbilityTurnRequest turnRequest, Battle battle, GameData gameData)
         {
-            var source = battle.GetMonster(turnRequest.SourcePokemonId);
+            var source = battle.GetMonster(turnRequest.SourceMonsterId);
             var isAlive = source.Health > 0;
             var hasPoints = source.GetAbility(turnRequest.AbilityId).Points > 0;
             return isAlive && hasPoints;
@@ -16,7 +16,7 @@ namespace Pokemon.Combat.Core.Processors
 
         protected override void InternalProcessMessage(AbilityTurnRequest turnRequest, Battle battle, GameData gameData)
         {
-            var source = battle.GetMonster(turnRequest.SourcePokemonId);
+            var source = battle.GetMonster(turnRequest.SourceMonsterId);
             var ability = source.GetAbility(turnRequest.AbilityId);
             ability.Points--;
 
