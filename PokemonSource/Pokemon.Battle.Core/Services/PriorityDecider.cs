@@ -29,7 +29,7 @@ namespace Pokemon.Combat.Core.Services
                 return turnOrder;
             }
 
-            throw new NotSupportedException("Currently only support Abilities");
+            throw new NotSupportedException($"Only support {nameof(AbilityTurnRequest)}.");
         }
     }
 }

@@ -7,15 +7,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Cli", "Pokemon.Cli\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Core", "Pokemon.Core\Pokemon.Core.csproj", "{59CD3109-8804-4B4D-9942-3E4DAC7694DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.Debug", "Pokemon.Debug\Pokemon.Debug.csproj", "{69E84E7D-33A3-42A3-BC2D-32D0D4773371}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Debug", "Pokemon.Debug\Pokemon.Debug.csproj", "{69E84E7D-33A3-42A3-BC2D-32D0D4773371}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.Gamedata", "Pokemon.Gamedata\Pokemon.Gamedata.csproj", "{028FCE00-4D4D-489F-9460-BAB587DD3AB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Gamedata", "Pokemon.Gamedata\Pokemon.Gamedata.csproj", "{028FCE00-4D4D-489F-9460-BAB587DD3AB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.State", "Pokemon.State\Pokemon.State.csproj", "{A0BAF547-BAE5-4FD5-A378-1FDB60EC0A76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.State", "Pokemon.State\Pokemon.State.csproj", "{A0BAF547-BAE5-4FD5-A378-1FDB60EC0A76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.Combat.Core", "Pokemon.Battle.Core\Pokemon.Combat.Core.csproj", "{713D6B43-A8B5-464A-ACF5-0A6536411D1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Combat.Core", "Pokemon.Battle.Core\Pokemon.Combat.Core.csproj", "{713D6B43-A8B5-464A-ACF5-0A6536411D1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.Combat.State", "Pokemon.Battle.State\Pokemon.Combat.State.csproj", "{EBAC2532-0A7E-48A9-9AE1-76FF803523CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon.Combat.State", "Pokemon.Battle.State\Pokemon.Combat.State.csproj", "{EBAC2532-0A7E-48A9-9AE1-76FF803523CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon.Combat.Debug", "Pokemon.Combat.Debug\Pokemon.Combat.Debug.csproj", "{3DE66404-08CC-4AD8-8D53-E80B4DDCF4EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{EBAC2532-0A7E-48A9-9AE1-76FF803523CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBAC2532-0A7E-48A9-9AE1-76FF803523CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBAC2532-0A7E-48A9-9AE1-76FF803523CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DE66404-08CC-4AD8-8D53-E80B4DDCF4EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DE66404-08CC-4AD8-8D53-E80B4DDCF4EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DE66404-08CC-4AD8-8D53-E80B4DDCF4EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DE66404-08CC-4AD8-8D53-E80B4DDCF4EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

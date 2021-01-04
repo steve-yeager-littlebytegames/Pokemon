@@ -6,7 +6,7 @@ namespace Pokemon.Combat.Core.Processors
 {
     public interface IAbilityProcessor
     {
-        bool IsMessageValid(TurnRequest request, Battle battle, GameData gameData);
-        void ProcessMessage(TurnRequest request, Battle battle, GameData gameData);
+        bool IsRequestValid(TurnRequest request, Battle battle, GameData gameData);
+        void ProcessRequest(TurnRequest request, Battle battle, GameData gameData);
     }
 }

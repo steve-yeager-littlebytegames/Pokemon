@@ -55,11 +55,13 @@ namespace Pokemon.Core
             File.WriteAllText(filePath, gameStateJson);
         }
 
-        public void StartBattle(Guid trainer1Id, Guid trainer2Id)
+        public Guid StartBattle(Guid trainer1Id, Guid trainer2Id)
         {
+            // TODO: Create battle.
+            return Guid.Empty;
         }
 
-        public void FightRound(BattleState battleState)
+        public void FightRound(Guid battleId)
         {
         }
     }

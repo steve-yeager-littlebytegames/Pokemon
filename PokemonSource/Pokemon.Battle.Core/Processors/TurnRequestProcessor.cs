@@ -9,8 +9,8 @@ namespace Pokemon.Combat.Core.Processors
         protected abstract bool InternalIsMessageValid(TMessage request, Battle battle, GameData gameData);
         protected abstract void InternalProcessMessage(TMessage request, Battle battle, GameData gameData);
 
-        public bool IsMessageValid(TurnRequest request, Battle battle, GameData gameData) => InternalIsMessageValid((TMessage)request, battle, gameData);
+        public bool IsRequestValid(TurnRequest request, Battle battle, GameData gameData) => InternalIsMessageValid((TMessage)request, battle, gameData);
 
-        public void ProcessMessage(TurnRequest request, Battle battle, GameData gameData) => InternalProcessMessage((TMessage)request, battle, gameData);
+        public void ProcessRequest(TurnRequest request, Battle battle, GameData gameData) => InternalProcessMessage((TMessage)request, battle, gameData);
     }
 }

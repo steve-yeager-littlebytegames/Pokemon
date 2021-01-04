@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Pokemon.Combat.Debug\Pokemon.Combat.Debug.csproj" />
     <ProjectReference Include="..\Pokemon.Core\Pokemon.Core.csproj" />
-    <ProjectReference Include="..\Pokemon.Debug\Pokemon.Debug.csproj" />
   </ItemGroup>
 
   <Target Name="Rename" AfterTargets="AfterBuild">
